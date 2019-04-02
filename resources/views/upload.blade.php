@@ -82,8 +82,10 @@
                   </div>
                   <div class="x_content">
                     <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                    <form enctype="multipart/form-data" action="#" method="post" id="add-courses">
+                    <form enctype="multipart/form-data" action="{{ url ('save_upload') }}" method="post" id="add-courses">
+                      <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                       <input type="file" name="file" id="file">
+                      <input type="submit" value="upload">
                     </form>
                   </div>
                 </div>

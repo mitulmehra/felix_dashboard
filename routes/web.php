@@ -15,4 +15,8 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('index');
+
+Route::view('/upload','upload');
+
+Route::post('/save_upload', 'UploadController@save')->name('save_upload');

@@ -81,13 +81,12 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                    <form enctype="multipart/form-data" action="{{ url ('save_upload') }}" method="post" id="add-courses">
-                      <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                      <input type="file" name="file" id="file">
-                      <input type="submit" value="upload">
-                    </form>
+                    <form action="{{ url ('save_upload') }}" method="post" enctype="multipart/form-data" class="dropzone" id ="dropzone">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </form>                     
                   </div>
+                  
+
                 </div>
               </div>
             </div>
@@ -102,25 +101,30 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- FastClick -->
-    <script src="js/fastclick.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
+    <script src="js/fastclick.js" type="text/javascript"></script>
     <!-- NProgress -->
-    <script src="js/nprogress.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
+    <script src="js/nprogress.js" type="text/javascript"></script>
     <!-- Dropzone.js -->
-    <script src="js/dropzone.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
+    <script src="js/dropzone.min.js" type="text/javascript"></script>
     <!-- Custom Theme Scripts -->
-    <script src="js/custom.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script>
-<!-- Google Analytics -->
-<script type="b4de77f5c0b6e259bf3650c1-text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-23581568-13', 'auto');
-ga('send', 'pageview');
+    <!-- <script src="js/custom.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script> -->
+
+  <!-- <script src="js/rocket-loader.min.js" data-cf-settings="b4de77f5c0b6e259bf3650c1-|49" defer=""></script> -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  Dropzone.options.dropzone = {
+  paramName: "file", // The name that will be used to transfer the file
+  maxFilesize: 2
+  
+};
+});
+  
 </script>
-  <script src="js/rocket-loader.min.js" data-cf-settings="b4de77f5c0b6e259bf3650c1-|49" defer=""></script></body>
+
+</body>
 </html>

@@ -21,11 +21,10 @@ class uploadController extends Controller
         $csvName = $csv->getClientOriginalName();
         $csv->move(storage_path('upload/csv'),$csvName);
         
-        // Excel::import(new PassengerImport, storage_path("upload/csv/$csvName") );
-        $array = (new PassengerImport)->toArray(storage_path("upload/csv/$csvName"));
-        
+        Excel::import(new PassengerImport, storage_path("upload/csv/$csvName") );
+        $array = (new PassengerImport)->toArray(storage_path("upload/csv/$csvName"));        
         foreach ($array as $row) {                
-            print_r($row);echo "<br>";
+            print_r($row);
         }
     }
 }

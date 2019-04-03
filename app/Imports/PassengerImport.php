@@ -16,8 +16,8 @@ class PassengerImport implements ToModel
     */
     public function model(array $row)
     {
-        
-        if (!isset($row[0])) {
+        // print_r($row);
+        if (!isset($row[0]) || ($row[0] == "Traveler Name" )  ) {
             return null;
         }
         return new Passenger([

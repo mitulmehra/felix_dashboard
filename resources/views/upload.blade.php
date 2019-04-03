@@ -116,12 +116,24 @@
   <!-- <script src="js/rocket-loader.min.js" data-cf-settings="b4de77f5c0b6e259bf3650c1-|49" defer=""></script> -->
 
 <script type="text/javascript">
+Dropzone.autoDiscover = false;
 $(document).ready(function(){
-  Dropzone.options.dropzone = {
-  paramName: "file", // The name that will be used to transfer the file
-  maxFilesize: 2
-  
-};
+    uploader = new Dropzone(".dropzone",{
+        paramName : "file",
+        uploadMultiple :false,
+        acceptedFiles : ".csv, .xls, .xlsx, .xlsm",
+        addRemoveLinks: true,
+        forceFallback: false,
+        maxFilesize:1000,
+        parallelUploads: 1,
+
+    });//end drop zone
+
+  uploader.on("success", function(file,response) {
+   console.log(response)
+  });
+
+
 });
   
 </script>

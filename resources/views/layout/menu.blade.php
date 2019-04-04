@@ -2,7 +2,7 @@
           <div class="left_col scroll-view">            
             
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{ url ('index') }}" class="site_title"><img src="images/logo_icon.png" alt="Logo Icon"> <span><img src="images/logo.png" alt="Logo"></span></a>
+              <a href="{{ url ('home') }}" class="site_title"><img src="images/logo_icon.png" alt="Logo Icon"> <span><img src="images/logo.png" alt="Logo"></span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -26,7 +26,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="{{ url ('index') }}"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="{{ url ('home') }}"><i class="fa fa-home"></i> Home</a></li>
                   <li><a href="{{ url ('videos') }}"><i class="fa fa-play-circle"></i> Template Videos </a></li>
                   <li><a href="{{ url ('upload') }}"><i class="fa fa-cloud-upload"></i> Upload Files </a></li>
                    <li><a><i class="fa fa-play-circle-o"></i> Video Links </a></li>                  

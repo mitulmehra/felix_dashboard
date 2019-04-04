@@ -85,8 +85,13 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     </form>                     
                   </div>
-                  
 
+                  <div id="fileval">
+                  </div>
+
+
+
+                 
                 </div>
               </div>
             </div>
@@ -129,13 +134,34 @@ $(document).ready(function(){
 
     });//end drop zone
 
-  uploader.on("success", function(file,response) {
-   console.log(response)
+  uploader.on("success", function(file,resp) 
+  {
+    resp = JSON.parse(resp);
+      // console.log((resp));
+      //  console.log(typeof(resp));
+      // console.log(item.length);
+      // console.log(item);
+    var out ='<table class="table table-bordered">';
+    resp.forEach(function(item)
+    {
+      out +="<tr><th>Traveler Name</th><th>Passenger Name</th><th>Age</th><th>Gender</th><th>Booking Date</th><th>Journey Date</th><th>Booking From</th><th>Booking To</th><th>Airport Name</th><th>Flight Time</th></tr>";
+      for (var i = 1; i < item.length; i++)
+      {
+        out +="<tr>";
+        for (var j = 0; j < item[i].length; j++)
+        {
+          out +="<td>";
+          out += item[i][j]
+          out +="</td>";
+        }
+        out +="</tr>";
+      }
+    });
+    out += "</table>";
+    $("#fileval").html(out);
   });
 
-
-});
-  
+}); 
 </script>
 
 </body>

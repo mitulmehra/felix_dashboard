@@ -23,8 +23,9 @@ class uploadController extends Controller
         
         Excel::import(new PassengerImport, storage_path("upload/csv/$csvName") );
         $array = (new PassengerImport)->toArray(storage_path("upload/csv/$csvName"));        
-        foreach ($array as $row) {                
-            print_r($row);
-        }
+        echo \json_encode($array);
+        // foreach ($array as $row) {                
+        //     print_r($row);
+        // }
     }
 }

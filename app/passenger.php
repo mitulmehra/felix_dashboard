@@ -17,7 +17,7 @@ class Passenger extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['traveler_name', 'passenger_name', 'age', 'gender', 'booking_date', 'journey_date', 'booking_from', 'booking_to', 'airport_name', 'flight_time' ];
+	protected $fillable = ['traveler_id','traveler_name', 'passenger_name', 'age', 'gender', 'booking_date', 'journey_date', 'booking_from', 'booking_to', 'airport_name', 'flight_time','video_status' ];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

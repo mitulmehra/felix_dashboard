@@ -62,7 +62,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Dropzone multiple file uploader</h2>
+                    <h2>Passenger file uploader</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -88,10 +88,7 @@
 
                   <div id="fileval">
                   </div>
-
-
-
-                 
+                 <input type="hidden" name="template_id" value="<?php echo $_GET['template_id']; ?>">
                 </div>
               </div>
             </div>
@@ -137,29 +134,40 @@ $(document).ready(function(){
   uploader.on("success", function(file,resp) 
   {
     resp = JSON.parse(resp);
-      // console.log((resp));
-      //  console.log(typeof(resp));
-      // console.log(item.length);
-      // console.log(item);
-    var out ='<table class="table table-bordered">';
+     
+    var out ='<table class="table table-bordered" id="passenger_table">';
     resp.forEach(function(item)
     {
-      out +="<tr><th>Traveler Name</th><th>Passenger Name</th><th>Age</th><th>Gender</th><th>Booking Date</th><th>Journey Date</th><th>Booking From</th><th>Booking To</th><th>Airport Name</th><th>Flight Time</th></tr>";
+      out +="<tr><th>Sl. No.</th><th>Traveler Name</th><th>Passenger Name</th><th>Age</th><th>Gender</th><th>Booking Date</th><th>Journey Date</th><th>Booking From</th><th>Booking To</th><th>Airport Name</th><th>Flight Time</th></tr>";
       for (var i = 1; i < item.length; i++)
       {
         out +="<tr>";
+        out +="<td>"+i+"</td>";
         for (var j = 0; j < item[i].length; j++)
-        {
+        {          
           out +="<td>";
           out += item[i][j]
           out +="</td>";
-        }
+        }        
         out +="</tr>";
       }
     });
     out += "</table>";
+    // out +="<button type=\"button\" name=\"video\" class=\"btn btn-success\" id=\"create_video\">Create Video</button>";
+    out +="<a href=\"/create_video\" role=\"button\" name=\"video\" class=\"btn btn-success\" id=\"create_video\">Create Video</button>";
     $("#fileval").html(out);
   });
+
+  /*$("body").on("click","#create_video",function(){
+    $("#passenger_table tr").each(function() {
+        console.log($(this).find("td").text());
+    });
+
+    // $.post("/create_video",{},function(resp){
+    //   console.log(resp);
+    // });
+  });*/
+
 
 }); 
 </script>

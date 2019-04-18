@@ -27,7 +27,7 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="{{ url ('home') }}"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a href="{{ url ('videos') }}"><i class="fa fa-play-circle"></i> Template Videos </a></li>
+                  <li><a href="{{ url ('template_videos') }}"><i class="fa fa-play-circle"></i> Template Videos </a></li>
                   <li><a href="{{ url ('upload') }}"><i class="fa fa-cloud-upload"></i> Upload Files </a></li>
                    <li><a><i class="fa fa-play-circle-o"></i> Video Links </a></li>                  
                    <li><a href="{{ url ('billing') }}"><i class="fa fa-money"></i> Billing </a></li>                  

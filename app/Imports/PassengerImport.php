@@ -21,6 +21,7 @@ class PassengerImport implements ToModel
             return null;
         }
         return new Passenger([
+            'traveler_id'     => \Auth::user()->id,
             'traveler_name'     => $row[0],
             'passenger_name'    => $row[1], 
             'age'    => $row[2], 
@@ -30,7 +31,8 @@ class PassengerImport implements ToModel
             'booking_from'    => $row[6], 
             'booking_to'    => $row[7], 
             'airport_name'    => $row[8], 
-            'flight_time'    => $row[9]            
+            'flight_time'    => $row[9],
+            'video_status'    => 0            
         ]);
     }
 }

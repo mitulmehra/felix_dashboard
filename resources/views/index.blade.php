@@ -10,16 +10,16 @@
     <title>FelixVideos</title>
     <link type="text/css" rel="icon" href="images/favi_icon.png">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="css/nprogress.css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" type="text/css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
   </head>
 
   <body class="nav-md">

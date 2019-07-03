@@ -24,5 +24,6 @@ Route::group(['middleware' => ['login']], function (){
 
     Route::get('/template_videos','VideoController@index');
     Route::get('/create_video','VideoController@create_video');
+    Route::post('/render_video','VideoController@render_video');
 
 });

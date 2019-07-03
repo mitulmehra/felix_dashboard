@@ -10,18 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>FelixVideos</title>
-    <link type="text/css" rel="icon" href="images/favi_icon.png">
+    <link rel="icon" href="images/favi_icon.png">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="css/nprogress.css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
     <!-- Dropzone.js -->
-    <link href="css/dropzone.min.css" rel="stylesheet">
+    <link href="css/dropzone.min.css" rtype="text/css" el="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -88,7 +88,7 @@
 
                   <div id="fileval">
                   </div>
-                 <input type="hidden" name="template_id" value="<?php echo $_GET['template_id']; ?>">
+                 <input type="hidden" name="template_id" value="<?php  echo  (isset($_GET['template_id']) ? $_GET['template_id'] :1) ; ?>">
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ $(document).ready(function(){
         for (var j = 0; j < item[i].length; j++)
         {          
           out +="<td>";
-          out += item[i][j]
+          out += item[i][j];
           out +="</td>";
         }        
         out +="</tr>";
@@ -158,16 +158,7 @@ $(document).ready(function(){
     $("#fileval").html(out);
   });
 
-  /*$("body").on("click","#create_video",function(){
-    $("#passenger_table tr").each(function() {
-        console.log($(this).find("td").text());
-    });
-
-    // $.post("/create_video",{},function(resp){
-    //   console.log(resp);
-    // });
-  });*/
-
+  
 
 }); 
 </script>

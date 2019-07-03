@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -9,20 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FelixVideos</title>
-    <link type="text/css" rel="icon" href="images/favi_icon.png">
-    
+    <title>FelixVideos Login</title>
+    <link  rel="icon" href="images/favi_icon.png">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="css/nprogress.css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">    
     <!-- Animate.css -->
-    <link href="css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link type="text/css" href="css/animate.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
+    
   </head>
 
   <body class="login">
@@ -34,32 +32,17 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-          <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <form>
               <h1>LOGIN FORM</h1>
               <div>
-                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus />
-                    @if ($errors->has('email'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                    @endif
+                <input type="text" class="form-control" placeholder="E-mail" name="email" type="email" autofocus/>
               </div>
               <div>
-                <input id="password" type="password" class="form-control" name="password" required />
-                    @if ($errors->has('password'))
-                        <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
+                <input type="password" class="form-control" placeholder="Password" name="password" type="password" value=""/>
               </div>
               <div>
-                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-              </div>
-              <div>
-                <button type="submit" class="btn btn-primary">Log in</button>
-                <!-- <a class="reset_pass" href="#reset" style="color:#72b326;">Reset Password?</a> -->
-                <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a>
+                <a class="btn btn-default submit" href="{{ url ('login') }}">Log in</a>
+                <a class="reset_pass" href="#reset" style="color:#72b326;">Reset Password?</a>
               </div>
 
               <div class="clearfix"></div>
@@ -120,38 +103,19 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-          <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <form>
               <h1>CREATE ACCOUNT</h1>
               <div>
-              <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="Username">
-                @if ($errors->has('name'))
-                <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
-                </span>
-                @endif
+                <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-              <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="Email">
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
+                <input type="email" class="form-control" placeholder="Email" required="" />
               </div>
               <div>
-              <input id="password" type="password" class="form-control" name="password" required placeholder="Password">
-                @if ($errors->has('password'))
-                <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
+                <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Confirm-Password">
-              </div>
-              <div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <a class="btn btn-default submit" href="index.html">Submit</a>
               </div>
 
               <div class="clearfix"></div>
@@ -167,7 +131,6 @@
                 <div>
                   <h1><img src="images/logo_login.png" width="200" height="34" alt="logo"></h1>
                   <p>© 2019 FelixVideos . All rights reserved.</p>
-
                 </div>
               </div>
             </form>

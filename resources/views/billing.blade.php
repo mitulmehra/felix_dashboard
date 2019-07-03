@@ -12,14 +12,14 @@
     <title>FelixVideos</title>
     <link type="text/css" rel="icon" href="images/favi_icon.png">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rtype="text/css" el="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="cs/nprogress.css" rel="stylesheet">
+    <link href="cs/nprogress.css" type="text/css" rel="stylesheet">
     
     <!-- Custom styling plus plugins -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
   </head>
 
   <body class="nav-md">

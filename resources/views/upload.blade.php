@@ -1,40 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">  
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>FelixVideos</title>
-    <link rel="icon" href="images/favi_icon.png">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
-    <!-- Dropzone.js -->
-    <link href="css/dropzone.min.css" rtype="text/css" el="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        
-        <!-- sidebar menu -->
-          @include('layout/menu')
-        <!-- /sidebar menu -->
-            
-        <!-- top navigation -->
-          @include('layout/header')
-        <!-- /top navigation -->
+@extends('master')
+@section('page_content')
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -96,27 +61,8 @@
         </div>
         <!-- /page content -->
 
-        <!-- footer content -->
-          @include('layout/footer')
-        <!-- /footer content -->
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- FastClick -->
-    <script src="js/fastclick.js" type="text/javascript"></script>
-    <!-- NProgress -->
-    <script src="js/nprogress.js" type="text/javascript"></script>
-    <!-- Dropzone.js -->
-    <script src="js/dropzone.min.js" type="text/javascript"></script>
-    <!-- Custom Theme Scripts -->
-    <!-- <script src="js/custom.min.js" type="b4de77f5c0b6e259bf3650c1-text/javascript"></script> -->
-
-  <!-- <script src="js/rocket-loader.min.js" data-cf-settings="b4de77f5c0b6e259bf3650c1-|49" defer=""></script> -->
-
+    @endsection 
+    @section('script')
 <script type="text/javascript">
 Dropzone.autoDiscover = false;
 $(document).ready(function(){
@@ -162,6 +108,4 @@ $(document).ready(function(){
 
 }); 
 </script>
-
-</body>
-</html>
+  @endsection 

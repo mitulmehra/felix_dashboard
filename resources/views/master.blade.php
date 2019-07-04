@@ -10,16 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>FelixVideos</title>
-    <link  rel="icon" href="images/favi_icon.png">
+    <link rel="icon" href="{{asset('/assets/images/favi_icon.png')}}">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/font-awesome.min.css')}}" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/css/nprogress.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/nprogress.css')}}" type="text/css" rel="stylesheet">
     
     <!-- Custom styling plus plugins -->
-    <link href="/css/custom.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/custom.min.css')}}" type="text/css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -48,14 +48,15 @@
       </div>
     </div>
     <!-- jQuery -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.min.js')}}" type="text/javascript"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
     <!-- FastClick -->
-    <script src="js/fastclick.js" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/fastclick.js')}}" type="text/javascript"></script>
     <!-- NProgress -->
-    <script src="js/nprogress.js" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/nprogress.js')}}" type="text/javascript"></script>
     <!-- Custom Theme Scripts -->
-    <script src="js/custom.min.js" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/custom.min.js')}}" type="text/javascript"></script>
     @yield('script')
+</body>
 </html>

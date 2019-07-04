@@ -53,7 +53,7 @@
                       <a href="{{url('/upload?template_id=1')}}" style="cursor:pointer">
                         <div class="thumbnail">
                           <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />                           
+                            <img style="width: 100%; display: block;" src="/assets/images/media.jpg" alt="image" />                           
                           </div>
                           <div class="caption">
                             <p>Ticket Booking</p>

@@ -1,28 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>    
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>FelixVideos</title>
-    <link rel="icon" href="images/favi_icon.png">
+    <link rel="icon" href="{{asset('/assets/images/favi_icon.png')}}">
     
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/font-awesome.min.css')}}" type="text/css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="/css/nprogress.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/nprogress.css')}}" type="text/css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="/css/animate.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/animate.min.css')}}" type="text/css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/css/custom.min.css" type="text/css" rel="stylesheet">
+    <link href="{{asset('/assets/css/custom.min.css')}}" type="text/css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -73,7 +70,7 @@
                 <br />
 
                 <div>
-                   <h1><img src="images/logo_login.png" width="200" height="34" alt="logo"></h1>
+                   <h1><img src="/assets/images/logo_login.png" width="200" height="34" alt="logo"></h1>
                   <p>© 2019 FelixVideos . All rights reserved.</p>
                 </div>
               </div>
@@ -132,7 +129,7 @@
                 @endif
               </div>
               <div>
-              <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="Email">
+              <input id="email_reg" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="Email">
                 @if ($errors->has('email'))
                     <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
@@ -140,7 +137,7 @@
                 @endif
               </div>
               <div>
-              <input id="password" type="password" class="form-control" name="password" required placeholder="Password">
+              <input id="password_reg" type="password" class="form-control" name="password" required placeholder="Password">
                 @if ($errors->has('password'))
                 <span class="help-block">
                 <strong>{{ $errors->first('password') }}</strong>
@@ -165,7 +162,7 @@
                 <br />
 
                 <div>
-                  <h1><img src="images/logo_login.png" width="200" height="34" alt="logo"></h1>
+                  <h1><img src="/assets/images/logo_login.png" width="200" height="34" alt="logo"></h1>
                   <p>© 2019 FelixVideos . All rights reserved.</p>
 
                 </div>

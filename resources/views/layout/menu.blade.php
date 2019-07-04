@@ -2,7 +2,7 @@
           <div class="left_col scroll-view">            
             
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{ url ('home') }}" class="site_title"><img src="images/logo_icon.png" alt="Logo Icon"> <span><img src="images/logo.png" alt="Logo"></span></a>
+              <a href="{{ url ('home') }}" class="site_title"><img src="/assets/images/logo_icon.png" alt="Logo Icon"> <span><img src="/assets/images/logo.png" alt="Logo"></span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -10,7 +10,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="/assets/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>

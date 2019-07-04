@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">  
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>FelixVideos</title>
-    <link type="text/css" rel="icon" href="images/favi_icon.png">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="css/daterangepicker.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" type="text/css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        
-        <!-- sidebar menu -->
-          @include('layout/menu')
-        <!-- /sidebar menu -->
-            
-        <!-- top navigation -->
-          @include('layout/header')
-        <!-- /top navigation -->
+@extends('master')
+@section('page_content')
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -492,52 +459,28 @@
           </div>
         </div>
         <!-- /page content -->
-
-        <!-- footer content -->
-          @include('layout/footer')
-        <!-- /footer content -->
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <!-- FastClick -->
-    <script src="js/fastclick.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <!-- NProgress -->
-    <script src="js/nprogress.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+  @endsection 
+       
+   
+        @section('script')
     <!-- Chart.js -->
-    <script src="js/Chart.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/custom.min.js')}}" type="text/javascript"></script>
     <!-- jQuery Sparklines -->
-    <script src="js/jquery.sparkline.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/custom.min.js')}}" type="text/javascript"></script>
     <!-- Flot -->
-    <script src="js/jquery.flot.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/jquery.flot.pie.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/jquery.flot.time.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/jquery.flot.stack.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/jquery.flot.resize.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.pie.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.time.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.stack.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.resize.js')}}" type="text/javascript"></script>
     <!-- Flot plugins -->
-    <script src="js/jquery.flot.orderBars.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/jquery.flot.spline.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/curvedLines.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.orderBars.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/jquery.flot.spline.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/curvedLines.js')}}" type="text/javascript"></script>
     <!-- DateJS -->
-    <script src="js/date.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/date.js')}}" type="text/javascript"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="js/moment.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-    <script src="js/daterangepicker.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
+    <script src="{{asset('/assets/js/moment.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/assets/js/daterangepicker.js')}}" type="text/javascript"></script>
     
-    <!-- Custom Theme Scripts -->
-    <script src="js/custom.min.js" type="478a6404f6d843ef6549063a-text/javascript"></script>
-<!-- Google Analytics -->
-<script type="478a6404f6d843ef6549063a-text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-23581568-13', 'auto');
-ga('send', 'pageview');
-</script>
-  <script src="js/rocket-loader.min.js" data-cf-settings="478a6404f6d843ef6549063a-|49" defer=""></script></body>
-
-</html>
+    @endsection 

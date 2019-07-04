@@ -1,4 +1,8 @@
 @extends('master')
+@section('style')
+<!-- Dropzone.js -->
+<link href="{{asset('/assets/css/dropzone.min.css')}}" type="text/css" rel="stylesheet">
+@endsection
 @section('page_content')
 
         <!-- page content -->
@@ -61,8 +65,9 @@
         </div>
         <!-- /page content -->
 
-    @endsection 
-    @section('script')
+@endsection 
+@section('script')
+<script src="{{asset('/assets/js/dropzone.min.js')}}" type="text/javascript"></script>
 <script type="text/javascript">
 Dropzone.autoDiscover = false;
 $(document).ready(function(){
